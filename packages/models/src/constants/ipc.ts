@@ -183,12 +183,6 @@ export enum MainChannels {
 
     // Editor
     SHOW_EDITOR_TAB = 'show-editor-tab',
-
-    // Directory Management
-    SCAN_DIRECTORY_STRUCTURE = 'scan-directory-structure',
-    WATCH_DIRECTORY = 'watch-directory',
-    UNWATCH_DIRECTORY = 'unwatch-directory',
-    GET_DIRECTORY_INFO = 'get-directory-info',
 }
 
 export enum GitChannels {

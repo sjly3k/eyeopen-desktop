@@ -77,9 +77,9 @@
         }
     },
     "welcome": {
-        "title": "Welcome to EyeOpen",
-        "titleReturn": "Welcome back to EyeOpen",
-        "description": "EyeOpen is an open-source visual editor for React apps. Design directly in your live product.",
+        "title": "Welcome to Onlook",
+        "titleReturn": "Welcome back to Onlook",
+        "description": "Onlook is an open-source visual editor for React apps. Design directly in your live product.",
         "alpha": "Alpha",
         "login": {
             "github": "Login with GitHub",

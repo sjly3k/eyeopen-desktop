@@ -7,43 +7,12 @@ import useResizeObserver from 'use-resize-observer';
 import { RightClickMenu } from '../RightClickMenu';
 import TreeNode from './Tree/TreeNode';
 import TreeRow from './Tree/TreeRow';
-import { IntegratedDirectoryManager } from '@/lib/directory/integrated-manager';
 
 const LayersTab = observer(() => {
     const treeRef = useRef<TreeApi<LayerNode>>();
     const editorEngine = useEditorEngine();
     const [treeHovered, setTreeHovered] = useState(false);
     const { ref, width, height } = useResizeObserver();
-
-    const [isLoading, setIsLoading] = useState(false);
-    const integratedDirectoryManager = new IntegratedDirectoryManager(editorEngine);
-
-    useEffect(() => {
-        setIsLoading(true);
-        const initializeDirectory = async () => {
-            setIsLoading(true);
-            try {
-                await integratedDirectoryManager.scanDirectoryStructure('/images');
-            } catch (error) {
-                console.error('디렉토리 초기화 실패:', error);
-            } finally {
-                setIsLoading(false);
-            }
-        };
-
-        initializeDirectory();
-
-        return () => {
-            integratedDirectoryManager.dispose();
-        };
-    }, [integratedDirectoryManager]);
-
-    const images = integratedDirectoryManager.filterSelectedImages('all');
-
-    console.log({
-        images,
-        isLoading,
-    });
 
     useEffect(handleSelectChange, [
         editorEngine.elements.selected,
