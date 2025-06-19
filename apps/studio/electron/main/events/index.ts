@@ -17,6 +17,7 @@ import { listenForPaymentMessages } from './payments';
 import { listenForRunMessages } from './run';
 import { listenForStorageMessages } from './storage';
 import { listenForVersionsMessages } from './versions';
+import { setupDirectoryHandlers } from '../directory';
 
 export function listenForIpcMessages() {
     listenForGeneralMessages();
@@ -33,6 +34,7 @@ export function listenForIpcMessages() {
     listenForAssetMessages();
     listenForVersionsMessages();
     listenForFileMessages();
+    setupDirectoryHandlers();
 }
 
 export function removeIpcListeners() {

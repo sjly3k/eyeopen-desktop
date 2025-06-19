@@ -1,4 +1,5 @@
 import { AuthManager } from '@/lib/auth';
+import { DirectoryManager } from '@/lib/directory';
 import { EditorEngine } from '@/lib/editor/engine';
 import { ProjectsManager } from '@/lib/projects';
 import { RouteManager } from '@/lib/routes';
@@ -8,6 +9,9 @@ import { UserManager } from '@/lib/user';
 import { createContext, useContext } from 'react';
 
 const authManager = new AuthManager();
+
+const directoryManager = new DirectoryManager();
+
 const routeManager = new RouteManager();
 const projectsManager = new ProjectsManager();
 const updateManager = new UpdateManager();
@@ -24,6 +28,7 @@ const UpdateContext = createContext(updateManager);
 const UserContext = createContext(userManager);
 const EditorEngineContext = createContext(editorEngine);
 const AppStateContext = createContext(appStateManager);
+const DirectoryContext = createContext(directoryManager);
 
 export const useAuthManager = () => useContext(AuthContext);
 export const useRouteManager = () => useContext(RouteContext);
@@ -32,3 +37,4 @@ export const useUpdateManager = () => useContext(UpdateContext);
 export const useUserManager = () => useContext(UserContext);
 export const useEditorEngine = () => useContext(EditorEngineContext);
 export const useAppStateManager = () => useContext(AppStateContext);
+export const useDirectoryManager = () => useContext(DirectoryContext);

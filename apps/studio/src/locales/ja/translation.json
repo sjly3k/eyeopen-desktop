@@ -272,9 +272,9 @@
         }
     },
     "welcome": {
-        "title": "Onlookへようこそ",
-        "titleReturn": "Onlookにお帰りなさい",
-        "description": "Onlookは、Reactアプリ向けのオープンソースビジュアルエディタです。実際に稼働する製品上で直接デザインできます。",
+        "title": "EyeOpenへようこそ",
+        "titleReturn": "EyeOpenにお帰りなさい",
+        "description": "EyeOpenは、Reactアプリ向けのオープンソースビジュアルエディタです。実際に稼働する製品上で直接デザインできます。",
         "alpha": "アルファ版",
         "login": {
             "github": "GitHubでログイン",

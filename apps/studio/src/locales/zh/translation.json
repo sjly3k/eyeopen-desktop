@@ -77,9 +77,9 @@
         }
     },
     "welcome": {
-        "title": "欢迎使用 Onlook",
-        "titleReturn": "欢迎回到 Onlook",
-        "description": "Onlook 是一个开源的 React 应用可视化编辑器，可在您的实时产品中直接进行设计。",
+        "title": "欢迎使用 EyeOpen",
+        "titleReturn": "欢迎回到 EyeOpen",
+        "description": "EyeOpen 是一个开源的 React 应用可视化编辑器，可在您的实时产品中直接进行设计。",
         "alpha": "Alpha",
         "login": {
             "github": "使用 GitHub 登录",
